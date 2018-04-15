@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/verification_Layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="401dp"
+        android:layout_height="87dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_weight="1"
+        android:paddingTop="@dimen/login_padding"
+        app:srcCompat="@drawable/logo" />
+
+    <EditText
+        android:id="@+id/verificationcode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/verify"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="26dp"
+        android:backgroundTint="@color/lightcolor"
+        android:ems="10"
+        android:fontFamily="sans-serif"
+        android:inputType="textPersonName"
+        android:hint="Verification Code"
+        android:textColor="@color/lightcolor"
+        android:textSize="@dimen/text_size" />
+
+    <Button
+        android:id="@+id/verify"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignEnd="@+id/verificationcode"
+        android:layout_alignStart="@+id/verificationcode"
+        android:layout_centerVertical="true"
+        android:background="@drawable/round_button_verification"
+        android:fontFamily="sans-serif"
+        android:text="@string/verification"
+        android:textColor="@color/white"
+        android:textSize="15dp" />
+</RelativeLayout>

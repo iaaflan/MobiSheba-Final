@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/login_Layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="401dp"
+        android:layout_height="87dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_weight="1"
+        android:paddingTop="@dimen/login_padding"
+        app:srcCompat="@drawable/logo" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:fontFamily="sans-serif"
+        android:text="@string/get_started"
+        android:id="@+id/textView2" />
+
+    <EditText
+        android:id="@+id/mobile_no"
+        android:layout_width="match_parent"
+        android:paddingTop="@dimen/text_size"
+        android:layout_marginLeft="@dimen/login_padding"
+        android:layout_marginRight="@dimen/login_padding"
+        android:backgroundTint="@color/lightcolor"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:hint="@string/mobile"
+        android:textSize="@dimen/text_size"
+        android:fontFamily="sans-serif"
+        android:textColor="@color/lightcolor"
+        android:ems="10"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/mobile_no"
+        android:layout_alignStart="@+id/mobile_no"
+        android:layout_below="@+id/mobile_no"
+        android:textSize="@dimen/text_size"
+        android:fontFamily="sans-serif"
+        android:textColor="@color/lightcolor"
+        android:hint="@string/password"
+        android:ems="10"
+        android:inputType="textEmailAddress" />
+
+    <TextView
+        android:id="@+id/forgot_password"
+        android:gravity="left"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/password"
+        android:layout_below="@+id/password"
+        android:fontFamily="sans-serif"
+        android:backgroundTint="@color/lightcolor"
+        android:textSize="@dimen/text_size"
+        android:text="@string/forgotpassword"
+        android:ems="10"
+        android:textColor="@color/red"/>
+
+    <Button
+        android:id="@+id/login"
+        android:background="@drawable/round_button_login"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignEnd="@+id/password"
+        android:layout_alignStart="@+id/forgot_password"
+        android:layout_centerVertical="true"
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif"
+        android:textSize="15dp"
+        android:text="@string/Login" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textView2"
+        android:layout_below="@+id/login"
+        android:layout_marginEnd="36dp"
+        android:layout_marginTop="14dp"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:text="@string/newtomobisheba"
+        android:textColor="@color/materialblack"
+        android:textSize="@dimen/text_size" />
+
+    <TextView
+        android:id="@+id/registernow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_alignTop="@+id/textView5"
+        android:layout_marginStart="57dp"
+        android:textColor="@color/red"
+        android:fontFamily="sans-serif"
+        android:textSize="@dimen/text_size"
+        android:clickable="true"
+        android:text="@string/registernow" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="77dp"
+        android:fontFamily="sans-serif"
+        android:textColor="@color/materialblack"
+        android:text="@string/orsigninwith" />
+
+    <Button
+        android:id="@+id/facebook"
+        android:layout_width="120dp"
+        android:layout_height="30dp"
+        android:layout_alignEnd="@+id/textView5"
+        android:layout_alignParentBottom="true"
+        android:textSize="10dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginEnd="18dp"
+        android:background="@drawable/round_button_facebook"
+        android:text="@string/facebook"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/google"
+        android:layout_width="120dp"
+        android:layout_height="30dp"
+        android:textSize="10dp"
+        android:layout_alignBottom="@+id/facebook"
+        android:layout_alignStart="@+id/registernow"
+        android:background="@drawable/round_button_gmail"
+        android:text="@string/google"
+        android:textColor="@color/white" />
+</RelativeLayout>
