@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="148dp"
+        android:layout_height="208dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="65dp"
+        android:background="@drawable/round_button_login"
+        android:orientation="vertical"></LinearLayout>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/red" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="203dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="12dp"
+        android:layout_marginTop="76dp"
+        android:hint="@string/your_phone"
+        android:textSize="@dimen/text_size"
+        android:fontFamily="sans-serif"
+        android:backgroundTint="@color/lightcolor"
+        android:ems="10"
+        android:inputType="phone" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:backgroundTint="@color/lightcolor"
+        android:hint="@string/your_recharge_amount"
+        android:textSize="@dimen/text_size"
+        android:fontFamily="sans-serif"
+        android:layout_width="203dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="12dp"
+        android:layout_marginTop="133dp"
+        android:ems="10"
+        android:inputType="phone" />
+
+    <RadioButton
+        android:id="@+id/radioButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/editText2"
+        android:layout_marginEnd="125dp"
+        android:text="@string/pre_paid"
+        android:textSize="@dimen/text_size" />
+
+    <RadioButton
+        android:id="@+id/radioButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/editText2"
+        android:textSize="@dimen/text_size"
+        android:layout_marginEnd="29dp"
+        android:text="@string/post_paid" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="184dp"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/editText"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="224dp"
+        android:textColor="@color/white"
+        android:background="@drawable/round_button_login"
+        android:text="@string/top_up" />
+
+</RelativeLayout>

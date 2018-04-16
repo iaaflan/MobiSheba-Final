@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/container"
@@ -9,10 +9,10 @@
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/navigation"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="0dp"
-        android:layout_marginStart="0dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
         android:background="?android:attr/windowBackground"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -21,13 +21,156 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="433dp"
+        android:layout_width="match_parent"
         android:layout_height="195dp"
-        android:layout_marginEnd="8dp"
         android:background="@color/red"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"></LinearLayout>
 
-</android.support.constraint.ConstraintLayout>
+    <Button
+        android:id="@+id/recharge"
+        android:layout_width="105dp"
+        android:layout_height="105dp"
+        android:layout_alignStart="@+id/button4"
+        android:layout_centerVertical="true"
+        android:background="@drawable/full_circle"
+        android:paddingTop="50dp"
+        android:text="@string/recharge"
+        android:textSize="@dimen/text_size_smaller"
+        app:layout_constraintBottom_toTopOf="@+id/button4"
+        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="105dp"
+        android:layout_height="105dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/full_circle"
+        android:paddingTop="50dp"
+        android:text="@string/bill_payment"
+        android:textSize="@dimen/text_size_smaller"
+        app:layout_constraintBottom_toTopOf="@+id/button5"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        tools:layout_editor_absoluteX="148dp" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="105dp"
+        android:layout_height="105dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="31dp"
+        android:background="@drawable/full_circle"
+        android:paddingTop="50dp"
+        android:text="@string/events"
+        android:textSize="@dimen/text_size_smaller"
+        app:layout_constraintBottom_toTopOf="@+id/button6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="105dp"
+        android:layout_height="105dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="117dp"
+        android:layout_marginStart="31dp"
+        android:background="@drawable/full_circle"
+        android:paddingTop="50dp"
+        android:text="@string/offers"
+        android:textSize="@dimen/text_size_smaller"
+        app:layout_constraintBottom_toTopOf="@+id/navigation"
+        app:layout_constraintEnd_toStartOf="@+id/button5"
+        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="105dp"
+        android:layout_height="105dp"
+        android:layout_alignTop="@+id/button4"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/full_circle"
+        android:paddingTop="50dp"
+        android:text="@string/transactions"
+        android:textSize="@dimen/text_size_smaller"
+        app:layout_constraintBottom_toTopOf="@+id/navigation"
+        tools:layout_editor_absoluteX="147dp" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="105dp"
+        android:layout_height="105dp"
+        android:layout_alignStart="@+id/button3"
+        android:layout_alignTop="@+id/button4"
+        android:background="@drawable/full_circle"
+        android:paddingTop="50dp"
+        android:text="@string/points"
+        android:textSize="@dimen/text_size_smaller"
+        app:layout_constraintBottom_toTopOf="@+id/navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.615"
+        app:layout_constraintStart_toEndOf="@+id/button5" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="41dp"
+        android:layout_height="74dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/recharge"
+        android:layout_marginStart="57dp"
+        app:srcCompat="@drawable/recharge" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="29dp"
+        android:layout_height="69dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/recharge"
+        android:layout_marginEnd="64dp"
+        app:srcCompat="@drawable/events" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="35dp"
+        android:layout_height="69dp"
+        android:layout_alignTop="@+id/recharge"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/payment" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="43dp"
+        android:layout_height="65dp"
+        android:layout_alignStart="@+id/imageView3"
+        android:layout_alignTop="@+id/button4"
+        app:srcCompat="@drawable/offers" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="49dp"
+        android:layout_height="62dp"
+        android:layout_alignBottom="@+id/imageView8"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="2dp"
+        app:srcCompat="@drawable/transaction" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="35dp"
+        android:layout_height="85dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/imageView6"
+        android:layout_marginBottom="138dp"
+        app:srcCompat="@drawable/points" />
+
+
+</RelativeLayout>
