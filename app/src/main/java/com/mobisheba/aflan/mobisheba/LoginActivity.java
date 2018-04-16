@@ -1,20 +1,24 @@
 package com.mobisheba.aflan.mobisheba;
 
 
+import android.Manifest;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.telephony.SmsManager;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 import java.util.Random;
 
-public class LoginActivity extends AppCompatActivity {
+
+public class LoginActivity extends AbsRuntimeAcitivty {
     final String fixedpassword="123456",fixedmobile="01954790638";
     EditText mobileNumber,password;
     TextView signupTextView;
@@ -23,6 +27,9 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_screen);
+        requestAppPermissions(new String[]{
+                        Manifest.permission.SEND_SMS}, R.string.msg
+                , 1);
         final View view = findViewById(R.id.login_Layout);
         mobileNumber = (EditText)findViewById(R.id.mobile_no);
         password = (EditText)findViewById(R.id.password);
@@ -70,6 +77,12 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
+    @Override
+    public void onPermissionsGranted(int requestCode) {
+        //Do anything when permisson granted
+        Toast.makeText(getApplicationContext(), "Permission granted", Toast.LENGTH_LONG).show();
+    }
+
     public boolean checkDetails(String mobile, String password)
     {
         boolean mstatus,pstatus;
@@ -89,7 +102,6 @@ public class LoginActivity extends AppCompatActivity {
         smsManager.sendTextMessage(mobile, null, "Hello, Your verification code is: "+ randomNumber, null, null);
         return randomNumber;
     }
-
 
 
 }
