@@ -5,6 +5,7 @@
     android:layout_height="match_parent">
 
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="148dp"
         android:layout_height="208dp"
         android:layout_alignParentStart="true"
@@ -15,46 +16,46 @@
         android:orientation="vertical">
 
         <TextView
-            android:layout_marginTop="@dimen/text_size"
-            android:layout_marginLeft="48dp"
             android:id="@+id/balance"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="15dp"
+            android:layout_marginLeft="48dp"
+            android:layout_marginTop="@dimen/text_size"
+            android:text="@string/balance"
             android:textColor="@color/white"
-            android:text="@string/balance" />
+            android:textSize="15dp" />
 
         <TextView
             android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:gravity="center"
-            android:textColor="@color/white"
-            android:textSize="@dimen/text_size"
             android:text="@string/currency"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size" />
 
         <TextView
             android:id="@+id/textView4"
-            android:textColor="@color/white"
-            android:textSize="20dp"
-            android:layout_marginTop="10dp"
-            android:text="@string/amount"
-            android:gravity="center"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="@string/amount"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
 
         <Button
             android:id="@+id/button11"
             android:layout_width="49dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginLeft="50dp"
-            android:textColor="@color/white"
-            android:gravity="center"
-            android:textSize="@dimen/text_size_smaller"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="15dp"
             android:background="@drawable/full_circle"
-            android:text="@string/reload" />
+            android:gravity="center"
+            android:text="@string/reload"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_smaller" />
 
 
     </LinearLayout>
@@ -75,27 +76,27 @@
         android:layout_alignParentTop="true"
         android:layout_marginEnd="12dp"
         android:layout_marginTop="76dp"
-        android:hint="@string/your_phone"
-        android:textSize="@dimen/text_size"
-        android:fontFamily="sans-serif"
         android:backgroundTint="@color/lightcolor"
         android:ems="10"
-        android:inputType="phone" />
+        android:fontFamily="sans-serif"
+        android:hint="@string/your_phone"
+        android:inputType="phone"
+        android:textSize="@dimen/text_size" />
 
     <EditText
         android:id="@+id/editText2"
-        android:backgroundTint="@color/lightcolor"
-        android:hint="@string/your_recharge_amount"
-        android:textSize="@dimen/text_size"
-        android:fontFamily="sans-serif"
         android:layout_width="203dp"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
         android:layout_marginEnd="12dp"
         android:layout_marginTop="133dp"
+        android:backgroundTint="@color/lightcolor"
         android:ems="10"
-        android:inputType="phone" />
+        android:fontFamily="sans-serif"
+        android:hint="@string/your_recharge_amount"
+        android:inputType="phone"
+        android:textSize="@dimen/text_size" />
 
     <RadioButton
         android:id="@+id/radioButton2"
@@ -113,9 +114,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_below="@+id/editText2"
-        android:textSize="@dimen/text_size"
         android:layout_marginEnd="29dp"
-        android:text="@string/post_paid" />
+        android:text="@string/post_paid"
+        android:textSize="@dimen/text_size" />
 
     <Button
         android:id="@+id/button"
@@ -124,9 +125,9 @@
         android:layout_alignEnd="@+id/editText"
         android:layout_alignParentTop="true"
         android:layout_marginTop="224dp"
-        android:textColor="@color/white"
         android:background="@drawable/round_button_login"
-        android:text="@string/top_up" />
+        android:text="@string/top_up"
+        android:textColor="@color/white" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -137,42 +138,6 @@
         android:layout_marginBottom="108dp"
         app:srcCompat="@drawable/logo" />
 
-    <Button
-        android:id="@+id/button7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="230dp"
-        android:layout_marginStart="20dp"
-        android:background="@drawable/round_button_login"
-        android:text="Button" />
 
-    <Button
-        android:id="@+id/button8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/button7"
-        android:layout_toStartOf="@+id/button9"
-        android:background="@drawable/round_button_login"
-        android:text="Button" />
-
-    <Button
-        android:id="@+id/button9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/button7"
-        android:layout_toStartOf="@+id/button10"
-        android:background="@drawable/round_button_login"
-        android:text="Button" />
-
-    <Button
-        android:id="@+id/button10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/editText"
-        android:layout_alignTop="@+id/button7"
-        android:background="@drawable/round_button_login"
-        android:text="Button" />
 
 </RelativeLayout>

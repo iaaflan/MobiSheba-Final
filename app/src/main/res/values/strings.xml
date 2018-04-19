@@ -56,4 +56,37 @@
     <string name="action_settings">Settings</string>
     <string name="single_permission_text">(Click on FAB to check Single permission.\nTo test again, change the app permission in settings or reinstall the app)</string>
 
+
+    <!-- TEST TEST -->
+    <string name="title_activity_welcome">Home Screen</string>
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+
+    <string name="slide_1_title">Topup</string>
+    <string name="slide_1_desc">The easiest way to recharge your phone.</string>
+
+    <string name="slide_2_title">Bill Payment</string>
+    <string name="slide_2_desc">Now you will be able to pay bills with your phone!</string>
+
+    <string name="slide_3_title">Great Discounts</string>
+    <string name="slide_3_desc">Best discounts on every single service we offer!</string>
+
+    <string name="slide_4_title">Transactions</string>
+    <string name="slide_4_desc">Now you can use your phone for transaction as well!</string>
+
+    <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome slider -> clear data</string>
+    <string name="play_again">Play Again</string>
+
+    <!-- ACCOUNT TYPES SCREEN -->
+    <string name="select_acc">SELECT YOUR ACCOUNT TYPE</string>
+    <string name="personal_acc">Personal Account</string>
+    <string name="create_per_acc">Create personal account and enjoy our exclusive services.</string>
+    <string name="lets_go">Let\'s Go</string>
+    <string name="digital_enterprise">Digital Enterprise</string>
+    <string name="create_digent_acc">Create digital enterprise account and enjoy our exclusive services.</string>
+    <string name="lets_go_dig">Let\'s Go</string>
+    <string name="already_acc_ats">Already have an account?</string>
+    <string name="login_ats">Login</string>
+
 </resources>
