@@ -16,61 +16,61 @@
         app:srcCompat="@drawable/logo" />
 
     <TextView
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/imageView"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
         android:fontFamily="sans-serif"
-        android:text="@string/register"
-        android:id="@+id/textView2" />
+        android:text="@string/register" />
 
     <EditText
         android:id="@+id/your_name"
         android:layout_width="match_parent"
-        android:paddingTop="@dimen/text_size"
-        android:layout_marginLeft="@dimen/login_padding"
-        android:layout_marginRight="@dimen/login_padding"
-        android:backgroundTint="@color/lightcolor"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView2"
         android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/login_padding"
+        android:layout_marginRight="@dimen/login_padding"
         android:layout_marginTop="35dp"
-        android:hint="@string/your_fullname"
-        android:textSize="@dimen/text_size"
-        android:fontFamily="sans-serif"
-        android:textColor="@color/lightcolor"
+        android:backgroundTint="@color/lightcolor"
         android:ems="10"
-        android:inputType="text" />
+        android:fontFamily="sans-serif"
+        android:hint="@string/company_name"
+        android:inputType="text"
+        android:paddingTop="@dimen/text_size"
+        android:textColor="@color/lightcolor"
+        android:textSize="@dimen/text_size" />
 
     <EditText
         android:id="@+id/your_mobile"
-        android:layout_marginLeft="@dimen/login_padding"
-        android:layout_marginRight="@dimen/login_padding"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/your_name"
+        android:layout_marginLeft="@dimen/login_padding"
+        android:layout_marginRight="@dimen/login_padding"
+        android:backgroundTint="@color/lightcolor"
         android:ems="10"
         android:fontFamily="sans-serif"
         android:hint="@string/your_mobile"
         android:inputType="number"
-        android:backgroundTint="@color/lightcolor"
         android:textColor="@color/lightcolor"
         android:textSize="@dimen/text_size" />
 
     <EditText
         android:id="@+id/your_nid"
-        android:backgroundTint="@color/lightcolor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignEnd="@+id/your_mobile"
         android:layout_alignStart="@+id/your_mobile"
         android:layout_below="@+id/your_mobile"
-        android:hint="@string/your_nid"
-        android:textSize="@dimen/text_size"
+        android:backgroundTint="@color/lightcolor"
         android:ems="10"
-        android:inputType="number" />
+        android:hint="@string/your_nid"
+        android:inputType="number"
+        android:textSize="@dimen/text_size" />
 
     <EditText
         android:id="@+id/your_email"
@@ -80,10 +80,10 @@
         android:layout_alignStart="@+id/your_nid"
         android:layout_below="@+id/your_nid"
         android:backgroundTint="@color/lightcolor"
-        android:hint="@string/your_email"
-        android:textSize="@dimen/text_size"
         android:ems="10"
-        android:inputType="textEmailAddress" />
+        android:hint="@string/your_email"
+        android:inputType="textEmailAddress"
+        android:textSize="@dimen/text_size" />
 
     <EditText
         android:id="@+id/your_password"
@@ -93,10 +93,10 @@
         android:layout_alignStart="@+id/your_email"
         android:layout_below="@+id/your_email"
         android:backgroundTint="@color/lightcolor"
-        android:textSize="@dimen/text_size"
-        android:hint="@string/your_password"
         android:ems="10"
-        android:inputType="textPassword" />
+        android:hint="@string/your_password"
+        android:inputType="textPassword"
+        android:textSize="@dimen/text_size" />
 
     <Button
         android:id="@+id/sign_up"
@@ -107,8 +107,8 @@
         android:layout_below="@+id/your_password"
         android:layout_marginTop="24dp"
         android:background="@drawable/round_button_login"
-        android:fontFamily="sans-serif"
         android:elevation="10dp"
+        android:fontFamily="sans-serif"
         android:text="@string/sign_up"
         android:textColor="@color/white"
         android:textSize="15dp" />

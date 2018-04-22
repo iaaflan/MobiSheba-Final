@@ -11,6 +11,7 @@
     <!--- SIGN UP STRINGS -->
     <string name="register">REGISTER</string>
     <string name="your_fullname">Your Full Name</string>
+    <string name="company_name">Company Name</string>
     <string name="your_mobile">Your Mobile No</string>
     <string name="your_nid">Your NID No</string>
     <string name="your_email">Your Email</string>

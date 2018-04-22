@@ -9,43 +9,42 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
 /**
  * Created by Aflan on 4/16/2018.
  */
 
-public class SignupActivity extends AppCompatActivity {
+public class SignupEnterpriseActivity extends AppCompatActivity {
     TextView loginTextView;
     EditText nameEditText, mobileEditText, nidEditText, emailEditText, passwordEditText;
     Button signupButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.signup_screen);
+        setContentView(R.layout.signup_screen_enterprise);
         final View view = findViewById(R.id.login_Layout);
-        signupButton = (Button) findViewById(R.id.sign_up);
+        signupButton = findViewById(R.id.sign_up);
 
-        nameEditText = (EditText)findViewById(R.id.your_name);
-        mobileEditText = (EditText)findViewById(R.id.your_mobile);
-        nidEditText = (EditText)findViewById(R.id.your_nid);
-        emailEditText = (EditText)findViewById(R.id.your_email);
-        passwordEditText = (EditText)findViewById(R.id.your_password);
+        nameEditText = findViewById(R.id.your_name);
+        mobileEditText = findViewById(R.id.your_mobile);
+        nidEditText = findViewById(R.id.your_nid);
+        emailEditText = findViewById(R.id.your_email);
+        passwordEditText = findViewById(R.id.your_password);
 
-        loginTextView = (TextView)findViewById(R.id.login_activity);
+        loginTextView = findViewById(R.id.login_activity);
 
         loginTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent myIntent = new Intent(SignupActivity.this, LoginActivity.class);
-                SignupActivity.this.startActivity(myIntent);
+                Intent myIntent = new Intent(SignupEnterpriseActivity.this, LoginActivity.class);
+                SignupEnterpriseActivity.this.startActivity(myIntent);
             }
         });
         signupButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //VARIABLE TO SEE SNACKBAR
-                final String name,mobile,nid,email,password;
+                final String name, mobile, nid, email, password;
                 name = nameEditText.getText().toString();
                 mobile = mobileEditText.getText().toString();
                 nid = nidEditText.getText().toString();
@@ -53,7 +52,7 @@ public class SignupActivity extends AppCompatActivity {
                 password = passwordEditText.getText().toString();
 
                 Snackbar snackbar = Snackbar
-                        .make(view,"You Typed: " + name + " " + mobile + " " + nid + " " + email + " " + password, Snackbar.LENGTH_LONG);
+                        .make(view, "You Typed: " + name + " " + mobile + " " + nid + " " + email + " " + password, Snackbar.LENGTH_LONG);
 
                 snackbar.show();
             }

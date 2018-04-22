@@ -16,6 +16,7 @@ import java.util.Random;
 
 
 public class LoginActivity extends AbsRuntimeAcitivty {
+    //fixedmobile="01954790638" 01754337576
     final String fixedpassword="123456",fixedmobile="01954790638";
     EditText mobileNumber,password;
     TextView signupTextView;
@@ -25,7 +26,7 @@ public class LoginActivity extends AbsRuntimeAcitivty {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_screen);
         requestAppPermissions(new String[]{
-                        Manifest.permission.SEND_SMS}, R.string.msg
+                        Manifest.permission.SEND_SMS, Manifest.permission.READ_PHONE_STATE}, R.string.msg
                 , 1);
         final View view = findViewById(R.id.login_Layout);
         mobileNumber = findViewById(R.id.mobile_no);
@@ -38,7 +39,7 @@ public class LoginActivity extends AbsRuntimeAcitivty {
             @Override
             public void onClick(View v)
             {
-                Intent myIntent = new Intent(LoginActivity.this, SignupActivity.class);
+                Intent myIntent = new Intent(LoginActivity.this, SignupPersonalActivity.class);
                 LoginActivity.this.startActivity(myIntent);
             }
 

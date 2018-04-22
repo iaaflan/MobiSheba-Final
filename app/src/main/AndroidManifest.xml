@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.mobisheba.aflan.mobisheba">
     <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -23,7 +24,8 @@
             android:name=".VerificationActivity"
             android:label="@string/app_name">
         </activity>
-        <activity android:name=".SignupActivity"
+        <activity
+            android:name=".SignupPersonalActivity"
             android:label="@string/app_name">
         </activity>
         <activity android:name=".MainActivity"
@@ -31,6 +33,12 @@
         </activity>
         <activity
             android:name=".RechargeActivity"
+            android:label="@string/app_name"></activity>
+        <activity
+            android:name=".AccountTypeActivity"
+            android:label="@string/app_name"></activity>
+        <activity
+            android:name=".SignupEnterpriseActivity"
             android:label="@string/app_name"></activity>
 
     </application>

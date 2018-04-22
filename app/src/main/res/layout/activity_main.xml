@@ -29,21 +29,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"></LinearLayout>
 
+
     <Button
         android:id="@+id/recharge"
-        android:layout_width="105dp"
-        android:layout_height="105dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_alignStart="@+id/button4"
-        android:layout_centerVertical="true"
+        android:layout_alignTop="@+id/button2"
         android:background="@drawable/full_circle"
         android:paddingTop="50dp"
         android:text="@string/recharge"
-        android:textSize="@dimen/text_size_smaller"
-        app:layout_constraintBottom_toTopOf="@+id/button4"
-        app:layout_constraintEnd_toStartOf="@+id/button2"
-        app:layout_constraintHorizontal_bias="0.513"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+        android:textSize="@dimen/text_size_smaller" />
 
 
     <Button
@@ -171,6 +167,5 @@
         android:layout_alignStart="@+id/imageView6"
         android:layout_marginBottom="138dp"
         app:srcCompat="@drawable/points" />
-
 
 </RelativeLayout>

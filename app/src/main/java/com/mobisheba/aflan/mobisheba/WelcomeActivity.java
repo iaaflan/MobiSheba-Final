@@ -42,9 +42,7 @@ public class WelcomeActivity extends AppCompatActivity {
             // changing the next button text 'NEXT' / 'GOT IT'
             if (position == layouts.length - 1) {
                 // last page. make button text to GOT IT
-                btnNext.setText(getString(R.string.login_ats));
-                btnNext.setTextColor(Color.parseColor("#ff0000"));
-                btnSkip.setVisibility(View.GONE);
+
             } else {
                 // still pages are left
                 btnNext.setText(getString(R.string.next));
@@ -72,8 +70,9 @@ public class WelcomeActivity extends AppCompatActivity {
         // Checking for first time launch - before calling setContentView()
         prefManager = new PrefManager(this);
         ///CHANGED IT TO TEST
-        if (prefManager.isFirstTimeLaunch()) {
-            launchHomeScreen();
+        if (!prefManager.isFirstTimeLaunch()) {
+            prefManager.setFirstTimeLaunch(false);
+            startActivity(new Intent(WelcomeActivity.this, AccountTypeActivity.class));
             finish();
         }
 
@@ -84,7 +83,7 @@ public class WelcomeActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_welcome);
 
-        loginText = findViewById(R.id.login);
+
         viewPager = findViewById(R.id.view_pager);
         dotsLayout = findViewById(R.id.layoutDots);
         btnSkip = findViewById(R.id.btn_skip);
@@ -97,7 +96,7 @@ public class WelcomeActivity extends AppCompatActivity {
                 R.layout.welcome_side1,
                 R.layout.welcome_side2,
                 R.layout.welcome_side3,
-                R.layout.account_type};
+                R.layout.welcome_side4};
 
         // adding bottom dots
         addBottomDots(0);
@@ -108,11 +107,12 @@ public class WelcomeActivity extends AppCompatActivity {
         myViewPagerAdapter = new MyViewPagerAdapter();
         viewPager.setAdapter(myViewPagerAdapter);
         viewPager.addOnPageChangeListener(viewPagerPageChangeListener);
-
         btnSkip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                launchHomeScreen();
+                prefManager.setFirstTimeLaunch(false);
+                startActivity(new Intent(WelcomeActivity.this, AccountTypeActivity.class));
+                finish();
             }
         });
         btnNext.setOnClickListener(new View.OnClickListener() {
@@ -125,7 +125,9 @@ public class WelcomeActivity extends AppCompatActivity {
                     // move to next screen
                     viewPager.setCurrentItem(current);
                 } else {
-                    launchHomeScreen();
+                    prefManager.setFirstTimeLaunch(false);
+                    startActivity(new Intent(WelcomeActivity.this, AccountTypeActivity.class));
+                    finish();
                 }
             }
         });
@@ -157,7 +159,7 @@ public class WelcomeActivity extends AppCompatActivity {
 
     private void launchHomeScreen() {
         prefManager.setFirstTimeLaunch(false);
-        startActivity(new Intent(WelcomeActivity.this, LoginActivity.class));
+        startActivity(new Intent(WelcomeActivity.this, AccountTypeActivity.class));
         finish();
     }
 
